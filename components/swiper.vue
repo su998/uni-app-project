@@ -7,17 +7,23 @@
 			 circular
 			 indicator-color="#FFFFFF"
 			 indicator-active-color="#FF0000"
-			 previous-margin="10rpx"
-			 next-margin="10rpx"
+			 previous-margin="30rpx"
+			 next-margin="30rpx"
 		 >
 			<swiper-item>
-				<view class="swiper-item uni-bg-red">A</view>
+				<view class="swiper-item">
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="scaleToFill"></image>
+				</view>
 			</swiper-item>
 			<swiper-item>
-				<view class="swiper-item uni-bg-green">B</view>
+				<view class="swiper-item">
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="scaleToFill"></image>
+				</view>
 			</swiper-item>
 			<swiper-item>
-				<view class="swiper-item uni-bg-blue">C</view>
+				<view class="swiper-item">
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="scaleToFill"></image>
+				</view>
 			</swiper-item>
 		</swiper>
 	</view>
@@ -35,25 +41,24 @@
 
 <style lang="less">
 .swiper_container{
+	position: relative;
 	.swiper{
 		  width: 100%;
 		  height: 294rpx;
-		  margin: 30rpx 0rpx;
+		  margin: 20rpx 0rpx;
 		  background-color: #FFFFFF;
 		.swiper-item{
-			width: 690rpx;
 			height: 294rpx;
 			margin: 0 10rpx;
-			border-radius: 6px;
-		}
-		.uni-bg-red {
-			background-color: red;
-		}
-		.uni-bg-green {
-			background-color: green;
-		}
-		.uni-bg-blue {
-			background-color: blue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			image {
+				width: 690rpx;
+				height: 294rpx;
+				background-color: #ffffff;
+				border-radius: 10rpx;
+			}
 		}
 	}
 }
