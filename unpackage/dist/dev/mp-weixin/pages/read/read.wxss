@@ -11,7 +11,7 @@
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
-  border-bottom: 1px solid red;
+  margin-bottom: 30rpx;
 }
 .read .featured_journals .featured_journals_header .title {
   font-family: 'PingFang-SC-Bold';
@@ -28,17 +28,54 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: row wrap;
-          flex-flow: row wrap;
+  -webkit-flex-flow: wrap;
+          flex-flow: wrap;
 }
 .read .featured_journals .featured_journals_container .featured_journal_item {
   width: 150rpx;
   height: 200rpx;
   background-color: #ccc;
 }
-.read .featured_journals .featured_journals_container .featured_journal_item:not(:first-child) {
+.read .featured_journals .featured_journals_container .featured_journal_item:not(:nth-child(4n)) {
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+.read .hot_listenBook .hot_listenBook_header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.read .hot_listenBook .hot_listenBook_header .title {
+  font-family: 'PingFang-SC-Bold';
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.read .hot_listenBook .hot_listenBook_header .more {
+  font-family: 'PingFang-SC-Medium';
+  color: #999999;
+  font-size: 24rpx;
+}
+.read .hot_listenBook .hot_listenBook_container {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: wrap;
+          flex-flow: wrap;
+}
+.read .hot_listenBook .hot_listenBook_container .hot_listenBook_item {
+  width: 150rpx;
+  height: 200rpx;
+  background-color: #ccc;
+}
+.read .hot_listenBook .hot_listenBook_container .hot_listenBook_item:not(:nth-child(4n)) {
   margin-right: 30rpx;
   margin-bottom: 30rpx;
 }
