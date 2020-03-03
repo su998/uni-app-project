@@ -1,0 +1,1 @@
+<view class="nav"><block wx:for="{{navlist}}" wx:for-item="item" wx:for-index="index" wx:key="index"><navigator class="{{['nav_item',(index===currentIndex)?'nav_item_selected':'']}}" url="{{item.url}}" hover-class="navigator-hover" data-event-opts="{{[['tap',[['seleted',[index]]]]]}}" bindtap="__e">{{''+item.text+''}}</navigator></block></view>

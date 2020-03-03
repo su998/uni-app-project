@@ -1,0 +1,64 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/read/read",
+			"style": {
+				"navigationBarTitleText": "健康报"
+			}
+		}, 
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "健康报"
+			}
+		},
+		{
+			"path": "pages/elejournal/elejournal",
+			"style": {
+				"navigationBarTitleText": "健康报"
+			}
+		}, {
+			"path": "pages/myself/myself",
+			"style": {
+				"navigationBarTitleText": "健康报"
+			}
+		}
+	],
+	"tabBar": {
+		"height":"78rpx",
+		"fontSize":"10pt",
+		"borderStyle":"white",
+		"color": "#666666",
+		"selectedColor": "#333333",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"list": [
+			{
+				"pagePath": "pages/read/read",
+				// "iconPath": "static/image/icon_API.png",
+				// "selectedIconPath": "static/image/icon_API_HL.png",
+				"text": "阅读"
+			},{
+			"pagePath": "pages/index/index",
+			// "iconPath": "static/image/icon_component.png",
+			// "selectedIconPath": "static/image/icon_component_HL.png",
+			"text": "精选"
+		},  {
+			"pagePath": "pages/elejournal/elejournal",
+			// "iconPath": "static/image/icon_API.png",
+			// "selectedIconPath": "static/image/icon_API_HL.png",
+			"text": "电子刊"
+		}, {
+			"pagePath": "pages/myself/myself",
+			// "iconPath": "static/image/icon_API.png",
+			// "selectedIconPath": "static/image/icon_API_HL.png",
+			"text": "我的"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FAFAFA",
+		"backgroundColor": "#FFFFFF"
+	}
+}

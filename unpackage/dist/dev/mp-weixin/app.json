@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/read/read",
+    "pages/index/index",
+    "pages/elejournal/elejournal",
+    "pages/myself/myself"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "height": "78rpx",
+    "fontSize": "10pt",
+    "borderStyle": "black",
+    "color": "#666666",
+    "selectedColor": "#333333",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/read/read",
+        "text": "阅读"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "精选"
+      },
+      {
+        "pagePath": "pages/elejournal/elejournal",
+        "text": "电子刊"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {}
+}

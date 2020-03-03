@@ -1,0 +1,22 @@
+.swiper_container .swiper {
+  width: 100%;
+  height: 294rpx;
+  margin: 30rpx 0rpx;
+  background-color: #FFFFFF;
+}
+.swiper_container .swiper .swiper-item {
+  width: 690rpx;
+  height: 294rpx;
+  margin: 0 10rpx;
+  border-radius: 6px;
+}
+.swiper_container .swiper .uni-bg-red {
+  background-color: red;
+}
+.swiper_container .swiper .uni-bg-green {
+  background-color: green;
+}
+.swiper_container .swiper .uni-bg-blue {
+  background-color: blue;
+}
+
