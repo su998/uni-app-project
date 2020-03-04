@@ -4,7 +4,7 @@
 		<view class="featured_journals">
 			<view class="featured_journals_header">
 				<text class="title">精选期刊</text>
-				<text class="more">查看更多 ></text>
+				<text class="more" @click="getMore">查看更多 ></text>
 			</view>
 			<view class="featured_journals_container">
 				<view class="featured_journal_item"></view>
@@ -43,6 +43,14 @@
 			return {
 				
 			};
+		},
+		methods: {
+			// 查看更多
+			getMore () {
+				uni.navigateTo({
+					url: './journalCategoryPage/journalCategoryPage'
+				})
+			}
 		}
 	}
 </script>
@@ -75,6 +83,8 @@
 				width: 150rpx;
 				height: 200rpx;
 				background-color: #ccc;
+				border-radius: 10rpx;
+				// box-shadow: 3px 3px #ccc;
 			}
 			.featured_journal_item:not(:nth-child(4n)) {
 				margin-right: 30rpx;
@@ -108,6 +118,8 @@
 				width: 150rpx;
 				height: 200rpx;
 				background-color: #ccc;
+				border-radius: 10rpx;
+				// box-shadow: 3px 3px #ccc;
 			}
 			.hot_listenBook_item:not(:nth-child(4n)) {
 				margin-right: 30rpx;
