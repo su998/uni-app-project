@@ -1,0 +1,1 @@
+<view><navigator class="voicebtn" url><image src="../../../static/images/read/语音@2x.png" mode="scaleToFill"></image><text>语音朗读</text></navigator></view>

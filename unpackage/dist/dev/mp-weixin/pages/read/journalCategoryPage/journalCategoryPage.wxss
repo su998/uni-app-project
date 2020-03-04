@@ -33,7 +33,6 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
-  height: 1118rpx;
   margin: 42rpx 26rpx 0 30rpx;
   overflow-y: auto;
 }
@@ -88,27 +87,5 @@
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-.journalCategoryPage .right .right-item .details .voicebtn {
-  display: inline-block;
-  width: 120rpx;
-  height: 40rpx;
-  line-height: 40rpx;
-  border: 1rpx solid #E9200F;
-  border-radius: 4rpx;
-  font-size: 20rpx;
-  color: #E9200F;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-justify-content: space-around;
-          justify-content: space-around;
-}
-.journalCategoryPage .right .right-item .details .voicebtn image {
-  width: 20rpx;
-  height: 18rpx;
 }
 

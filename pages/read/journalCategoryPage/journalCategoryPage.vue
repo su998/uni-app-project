@@ -11,9 +11,8 @@
 		</view>
 
 		<!-- 右边书籍 -->
-		<!-- <view class="right" :style="{height: navHeight+'px'}"> -->
 		<view class="right">
-			<scroll-view scroll-Y="true" class="right-scroll-Y" :style="{height: navHeight+'px'}">
+			<scroll-view scroll-Y="true" class="right-scroll-Y" :style="{height: detailsHeight+'px'}">
 			<view class="right-item" v-for="(item, index) in bookslist" :key="index">
 				<!-- 左边书籍封面 -->
 				<view class="img">
@@ -27,10 +26,11 @@
 							{{item.content}}
 						</text>
 					</view>
-					<navigator url="" class="voicebtn">
+					<!-- <navigator url="" class="voicebtn">
 						<image src="../../../static/images/read/语音@2x.png" mode="scaleToFill"></image>
 						<text>语音朗读</text>
-					</navigator>
+					</navigator> -->
+					<voicebtn/>
 				</view>
 			</view>
 			</scroll-view>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+	import voicebtn from '@/components/voicebtn.vue'
 	export default {
 		data() {
 			return {
@@ -172,8 +173,13 @@
 				// 用户手机高度
 				userAgentHeight: 0,
 				// 元素所需高度
-				navHeight:0
+				navHeight:0,
+				// 右边盒子所需高度
+				detailsHeight: 0
 			};
+		},
+		components: {
+			voicebtn
 		},
 		onReady() {
 			this.getUserAgentHeight()
@@ -186,12 +192,18 @@
 					success(res) { 
 						that.userAgentHeight = res.windowHeight //windoHeight为窗口高度，主要使用的是这个
 						let leftScroll = uni.createSelectorQuery().select(".left-scroll-Y"); //想要获取高度的元素名（class/id）
-						// let rightScroll = uni.createSelectorQuery().select(".right-scroll-Y");
 						leftScroll.boundingClientRect(data=>{
 							let userAgentHeight = that.userAgentHeight
-							that.navHeight =userAgentHeight-data.top  //计算高度：元素高度=窗口高度-元素距离顶部的距离（data.top）
+							that.navHeight =userAgentHeight - data.top  //计算高度：元素高度=窗口高度-元素距离顶部的距离（data.top）
 						}).exec()
-						console.log(that.userAgentHeight)
+						let rightScroll = uni.createSelectorQuery().select(".right-scroll-Y");
+						rightScroll.boundingClientRect(data=>{
+							let userAgentHeight = that.userAgentHeight
+							that.detailsHeight =userAgentHeight - data.top  //计算高度：元素高度=窗口高度-元素距离顶部的距离（data.top）
+						}).exec()
+						
+						console.log(that.navHeight)
+						console.log(that.detailsHeight)
 					}
 				})
 			},
@@ -240,7 +252,6 @@
 			// flex: 1;
 			display: flex;
 			flex-direction: column;
-			height: 1118rpx;
 			margin: 42rpx 26rpx 0 30rpx;
 			overflow-y: auto;
 
@@ -287,23 +298,23 @@
 						}
 					}
 
-					.voicebtn {
-						display: inline-block;
-						width: 120rpx;
-						height: 40rpx;
-						line-height: 40rpx;
-						border: 1rpx solid #E9200F;
-						border-radius: 4rpx;
-						font-size: 20rpx;
-						color: #E9200F;
-						display: flex;
-						align-items: center;
-						justify-content: space-around;
-						image {
-							width: 20rpx;
-							height: 18rpx;
-						}
-					}
+					// .voicebtn {
+					// 	display: inline-block;
+					// 	width: 120rpx;
+					// 	height: 40rpx;
+					// 	line-height: 40rpx;
+					// 	border: 1rpx solid #E9200F;
+					// 	border-radius: 4rpx;
+					// 	font-size: 20rpx;
+					// 	color: #E9200F;
+					// 	display: flex;
+					// 	align-items: center;
+					// 	justify-content: space-around;
+					// 	image {
+					// 		width: 20rpx;
+					// 		height: 18rpx;
+					// 	}
+					// }
 				}
 			}
 		}

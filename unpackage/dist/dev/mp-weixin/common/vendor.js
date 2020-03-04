@@ -7612,7 +7612,7 @@ module.exports = g;
 /***/ }),
 /* 4 */
 /*!*********************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/pages.json ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/pages.json ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8519,18 +8519,18 @@ module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2
 /***/ }),
 /* 7 */
 /*!**************************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/pages.json?{"type":"style"} ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/pages.json?{"type":"style"} ***!
   \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/read/read": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/read/journalCategoryPage/journalCategoryPage": { "navigationBarTitleText": "精选期刊", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/index/index": { "navigationBarTitleText": "健康报", "usingComponents": { "nav-top": "/components/navTop", "swiper": "/components/swiper" }, "usingAutoImportComponents": {} }, "pages/elejournal/elejournal": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/myself/myself": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#FAFAFA", "backgroundColor": "#FFFFFF" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/read/journalDetailsPage/journalDetailsPage": { "navigationBarTitleText": " ", "usingComponents": { "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/index/index": { "navigationBarTitleText": "健康报", "usingComponents": { "nav-top": "/components/navTop", "swiper": "/components/swiper" }, "usingAutoImportComponents": {} }, "pages/read/journalCategoryPage/journalCategoryPage": { "navigationBarTitleText": "精选期刊", "usingComponents": { "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/read/read": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/elejournal/elejournal": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/myself/myself": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#FAFAFA", "backgroundColor": "#FFFFFF" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
 /*!*************************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/pages.json?{"type":"stat"} ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/pages.json?{"type":"stat"} ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8666,7 +8666,7 @@ function normalizeComponent (
 /***/ }),
 /* 15 */
 /*!*************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/store/index.js ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/store/index.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

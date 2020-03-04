@@ -1,0 +1,23 @@
+.voicebtn {
+  display: inline-block;
+  width: 120rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #E9200F;
+  border-radius: 4rpx;
+  font-size: 20rpx;
+  color: #E9200F;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+}
+.voicebtn image {
+  width: 20rpx;
+  height: 18rpx;
+}
+

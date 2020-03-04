@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/read/journalDetailsPage/journalDetailsPage",
+    "pages/index/index",
     "pages/read/journalCategoryPage/journalCategoryPage",
     "pages/read/read",
-    "pages/index/index",
     "pages/elejournal/elejournal",
     "pages/myself/myself"
   ],
@@ -22,16 +23,16 @@
     "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/read/read",
-        "iconPath": "static/icon/阅读-未选中@2x.png",
-        "selectedIconPath": "static/icon/阅读-选中@2x.png",
-        "text": "阅读"
-      },
-      {
         "pagePath": "pages/index/index",
         "iconPath": "static/icon/精选-未选中@2x.png",
         "selectedIconPath": "static/icon/精选-选车@2x.png",
         "text": "精选"
+      },
+      {
+        "pagePath": "pages/read/read",
+        "iconPath": "static/icon/阅读-未选中@2x.png",
+        "selectedIconPath": "static/icon/阅读-选中@2x.png",
+        "text": "阅读"
       },
       {
         "pagePath": "pages/elejournal/elejournal",
@@ -49,5 +50,5 @@
   },
   "permission": {},
   "usingComponents": {},
-  "sitemapLocation": "sitemap94.json"
+  "sitemapLocation": "sitemap37.json"
 }

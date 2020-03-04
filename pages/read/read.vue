@@ -41,7 +41,7 @@
 	export default {
 		data() {
 			return {
-				
+
 			};
 		},
 		methods: {
@@ -50,7 +50,7 @@
 				uni.navigateTo({
 					url: './journalCategoryPage/journalCategoryPage'
 				})
-			}
+			},
 		}
 	}
 </script>

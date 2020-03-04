@@ -7,6 +7,6 @@ export default new Vuex.Store({
 		userSystem: '' // 用户手机系统
 	},
 	mutation: {
-		
+
 	}
 })

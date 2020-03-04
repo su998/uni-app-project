@@ -1,0 +1,26 @@
+.journalDetailsPage .header {
+  height: 581rpx;
+  width: 750rpx;
+  margin: auto;
+}
+.journalDetailsPage .header .top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  height: 320rpx;
+  margin: 30rpx 30rpx 39rpx 30rpx;
+}
+.journalDetailsPage .header .top .img {
+  width: 240rpx;
+  height: 320rpx;
+  background-color: #ccc;
+}
+.journalDetailsPage .header .top .details {
+  height: 320rpx;
+  width: 370rpx;
+  background-color: #ccc;
+}
+
