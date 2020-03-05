@@ -28,10 +28,6 @@
 							{{item.content}}
 						</text>
 					</view>
-					<!-- <navigator url="" class="voicebtn">
-						<image src="../../../static/images/read/语音@2x.png" mode="scaleToFill"></image>
-						<text>语音朗读</text>
-					</navigator> -->
 					<voicebtn/>
 				</view>
 			</view>
@@ -218,15 +214,17 @@
 </script>
 
 <style lang="less">
+page{
+	height: 100%;
 	.journalCategoryPage {
+		height: 100%;
 		display: flex;
 		.left {
 			height: 100%;
 			width: 168rpx;
 			background-color: #FAFAFA;
-
 			.left-scroll-Y {
-
+	
 				.left-item {
 					height: 100rpx;
 					line-height: 100rpx;
@@ -236,7 +234,7 @@
 					color: #333333;
 					font-size: 28rpx;
 				}
-
+	
 				.selected {
 					font-family: 'PingFang-SC-Bold';
 					font-weight: bold;
@@ -247,7 +245,7 @@
 				}
 			}
 		}
-
+	
 		// 右边主体
 		.right {
 			// flex: 1;
@@ -255,7 +253,7 @@
 			flex-direction: column;
 			margin: 42rpx 26rpx 42rpx 30rpx;
 			overflow-y: auto;
-
+	
 			.right-item {
 				height: 200rpx;
 				width: 526rpx;
@@ -267,14 +265,14 @@
 					height: 200rpx;
 					background-color: #ccc;
 				}
-
+	
 				.details {
 					height: 200rpx;
 					width: 345rpx;
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-
+	
 					.title {
 						height: 28rpx;
 						font-family: 'PingFang-SC-Bold';
@@ -282,7 +280,7 @@
 						color: #333333;
 						font-size: 30rpx;
 					}
-
+	
 					.content {
 						width: 345rpx;
 						height: 80rpx;
@@ -298,7 +296,7 @@
 							text-overflow: ellipsis;
 						}
 					}
-
+	
 					// .voicebtn {
 					// 	display: inline-block;
 					// 	width: 120rpx;
@@ -320,4 +318,6 @@
 			}
 		}
 	}
+}
+	
 </style>

@@ -1,14 +1,18 @@
-.journalCategoryPage {
+page {
+  height: 100%;
+}
+page .journalCategoryPage {
+  height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
 }
-.journalCategoryPage .left {
+page .journalCategoryPage .left {
   height: 100%;
   width: 168rpx;
   background-color: #FAFAFA;
 }
-.journalCategoryPage .left .left-scroll-Y .left-item {
+page .journalCategoryPage .left .left-scroll-Y .left-item {
   height: 100rpx;
   line-height: 100rpx;
   text-align: center;
@@ -17,7 +21,7 @@
   color: #333333;
   font-size: 28rpx;
 }
-.journalCategoryPage .left .left-scroll-Y .selected {
+page .journalCategoryPage .left .left-scroll-Y .selected {
   font-family: 'PingFang-SC-Bold';
   font-weight: bold;
   color: #E9200F;
@@ -25,7 +29,7 @@
   border-left: 4rpx solid #E9200F;
   box-sizing: border-box;
 }
-.journalCategoryPage .right {
+page .journalCategoryPage .right {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -36,7 +40,7 @@
   margin: 42rpx 26rpx 42rpx 30rpx;
   overflow-y: auto;
 }
-.journalCategoryPage .right .right-item {
+page .journalCategoryPage .right .right-item {
   height: 200rpx;
   width: 526rpx;
   display: -webkit-box;
@@ -47,12 +51,12 @@
           justify-content: space-between;
   margin-bottom: 28rpx;
 }
-.journalCategoryPage .right .right-item .img {
+page .journalCategoryPage .right .right-item .img {
   width: 150rpx;
   height: 200rpx;
   background-color: #ccc;
 }
-.journalCategoryPage .right .right-item .details {
+page .journalCategoryPage .right .right-item .details {
   height: 200rpx;
   width: 345rpx;
   display: -webkit-box;
@@ -66,18 +70,18 @@
   -webkit-justify-content: space-between;
           justify-content: space-between;
 }
-.journalCategoryPage .right .right-item .details .title {
+page .journalCategoryPage .right .right-item .details .title {
   height: 28rpx;
   font-family: 'PingFang-SC-Bold';
   font-weight: bold;
   color: #333333;
   font-size: 30rpx;
 }
-.journalCategoryPage .right .right-item .details .content {
+page .journalCategoryPage .right .right-item .details .content {
   width: 345rpx;
   height: 80rpx;
 }
-.journalCategoryPage .right .right-item .details .content text {
+page .journalCategoryPage .right .right-item .details .content text {
   font-family: 'PingFang-SC-Medium';
   font-weight: normal;
   color: #999999;
