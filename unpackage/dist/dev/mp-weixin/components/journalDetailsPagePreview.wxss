@@ -1,0 +1,17 @@
+.preview {
+  width: 100%;
+  margin: 30rpx 31rpx 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: wrap;
+          flex-flow: wrap;
+}
+.preview .preview_item {
+  height: 279.3rpx;
+  width: 210rpx;
+  background-color: #ccc;
+  margin-left: 31rpx;
+  margin-bottom: 31rpx;
+}
+

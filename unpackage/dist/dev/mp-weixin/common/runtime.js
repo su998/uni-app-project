@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/voicebtn":1,"components/navTop":1,"components/swiper":1};
+/******/ 		var cssChunks = {"components/navTop":1,"components/swiper":1,"components/journalDetailsPageDirectory":1,"components/journalDetailsPagePreview":1,"components/voicebtn":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/voicebtn":"components/voicebtn","components/navTop":"components/navTop","components/swiper":"components/swiper"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/navTop":"components/navTop","components/swiper":"components/swiper","components/journalDetailsPageDirectory":"components/journalDetailsPageDirectory","components/journalDetailsPagePreview":"components/journalDetailsPagePreview","components/voicebtn":"components/voicebtn"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

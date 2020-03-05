@@ -1,0 +1,68 @@
+.oldList .scroll-X {
+  width: 100%;
+  height: 48rpx;
+  white-space: nowrap;
+  margin: 30rpx 44rpx 40rpx 0;
+}
+.oldList .scroll-X .scroll-view-item {
+  display: inline-block;
+  width: 102rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  color: #666666;
+  font-size: 30rpx;
+}
+.oldList .scroll-X .scroll-view-item:first-child {
+  margin-left: 48rpx;
+}
+.oldList .scroll-X .selected {
+  width: 130rpx;
+  height: 48rpx;
+  text-align: center;
+  margin-left: 17rpx;
+  margin-right: 17rpx;
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#EB6056), to(#E82515));
+  border-radius: 24rpx;
+}
+.oldList .main {
+  width: 100%;
+  height: 1128rpx;
+  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: wrap;
+          flex-flow: wrap;
+}
+.oldList .main .item {
+  height: 324rpx;
+  width: 209rpx;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.oldList .main .item .img {
+  width: 209rpx;
+  height: 280rpx;
+  background-color: #F0AD4E;
+  border-radius: 10rpx;
+  box-shadow: 0 8rpx 10rpx #C1BDC3;
+}
+.oldList .main .item .text {
+  color: #333333;
+  font-size: 26rpx;
+  text-align: center;
+}
+

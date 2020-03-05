@@ -15,9 +15,11 @@
 			<scroll-view scroll-Y="true" class="right-scroll-Y" :style="{height: detailsHeight+'px'}">
 			<view class="right-item" v-for="(item, index) in bookslist" :key="index">
 				<!-- 左边书籍封面 -->
-				<view class="img">
-					<!-- <image></image> -->
-				</view>
+				<navigator url="../journalDetailsPage/journalDetailsPage">
+					<view class="img">
+						<!-- <image></image> -->
+					</view>
+				</navigator>
 				<!-- 右边详情 -->
 				<view class="details">
 					<view class="title">{{item.title}}</view>
@@ -201,9 +203,8 @@
 							let userAgentHeight = that.userAgentHeight
 							that.detailsHeight =userAgentHeight - data.top  //计算高度：元素高度=窗口高度-元素距离顶部的距离（data.top）
 						}).exec()
-						
-						console.log(that.navHeight)
-						console.log(that.detailsHeight)
+						// console.log(that.navHeight)
+						// console.log(that.detailsHeight)
 					}
 				})
 			},
@@ -252,7 +253,7 @@
 			// flex: 1;
 			display: flex;
 			flex-direction: column;
-			margin: 42rpx 26rpx 0 30rpx;
+			margin: 42rpx 26rpx 42rpx 30rpx;
 			overflow-y: auto;
 
 			.right-item {

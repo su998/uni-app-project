@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/read/journalDetailsPage/journalDetailsPage",
     "pages/index/index",
+    "pages/read/oldList/oldList",
+    "pages/read/journalDetailsPage/journalDetailsPage",
     "pages/read/journalCategoryPage/journalCategoryPage",
     "pages/read/read",
     "pages/elejournal/elejournal",
@@ -49,6 +50,5 @@
     ]
   },
   "permission": {},
-  "usingComponents": {},
-  "sitemapLocation": "sitemap37.json"
+  "usingComponents": {}
 }

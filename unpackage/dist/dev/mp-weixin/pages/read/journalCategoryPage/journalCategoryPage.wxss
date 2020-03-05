@@ -33,7 +33,7 @@
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
           flex-direction: column;
-  margin: 42rpx 26rpx 0 30rpx;
+  margin: 42rpx 26rpx 42rpx 30rpx;
   overflow-y: auto;
 }
 .journalCategoryPage .right .right-item {

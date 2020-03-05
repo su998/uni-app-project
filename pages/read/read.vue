@@ -1,5 +1,5 @@
 <template>
-	<view class="read">
+	<view class="read" >
 		<!-- 精选期刊 -->
 		<view class="featured_journals">
 			<view class="featured_journals_header">
@@ -41,7 +41,7 @@
 	export default {
 		data() {
 			return {
-
+				
 			};
 		},
 		methods: {

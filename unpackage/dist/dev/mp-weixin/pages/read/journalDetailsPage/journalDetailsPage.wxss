@@ -1,7 +1,6 @@
 .journalDetailsPage .header {
-  height: 581rpx;
+  height: auto;
   width: 750rpx;
-  margin: auto;
 }
 .journalDetailsPage .header .top {
   display: -webkit-box;
@@ -17,10 +16,113 @@
   width: 240rpx;
   height: 320rpx;
   background-color: #ccc;
+  border-radius: 10rpx;
 }
 .journalDetailsPage .header .top .details {
   height: 320rpx;
   width: 370rpx;
-  background-color: #ccc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+.journalDetailsPage .header .top .details .voicebtn {
+  position: absolute;
+  top: 28rpx;
+  right: 0;
+}
+.journalDetailsPage .header .top .details .title {
+  font-family: 'PingFang-SC-Bold';
+  font-weight: bold;
+  color: #333333;
+  font-size: 32rpx;
+  margin-top: 24rpx;
+}
+.journalDetailsPage .header .top .details .info {
+  height: 106rpx;
+  margin-top: 40rpx;
+  margin-bottom: 43rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  font-family: 'PingFang-SC-Medium';
+  font-weight: normal;
+  color: #666666;
+  font-size: 24rpx;
+}
+.journalDetailsPage .header .top .details .btn .nowRead {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #FFFFFF;
+  width: 150rpx;
+  height: 52rpx;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#EB6056), to(#E82515));
+  border-radius: 150rpx;
+  text-align: center;
+  line-height: 52rpx;
+}
+.journalDetailsPage .header .top .details .btn .oldList {
+  margin-left: 40rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  color: #666666;
+  width: 150rpx;
+  height: 52rpx;
+  background-color: #FFFFFF;
+  border: 1rpx solid #999999;
+  border-radius: 150rpx;
+  text-align: center;
+  line-height: 52rpx;
+}
+.journalDetailsPage .header .introduction {
+  width: 687rpx;
+  margin: 0 24rpx 29rpx 39rpx;
+}
+.journalDetailsPage .header .introduction text {
+  font-family: 'PingFang-SC-Medium';
+  font-weight: normal;
+  color: #666666;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  letter-spacing: 2rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.journalDetailsPage .header .introduction image {
+  height: 8rpx;
+  width: 16rpx;
+}
+.journalDetailsPage .directory_preview {
+  width: 100%;
+  height: auto;
+}
+.journalDetailsPage .directory_preview .title {
+  margin-top: 31rpx ;
+  margin-bottom: 26rpx;
+  text-align: center;
+  color: #666666;
+  font-size: 28rpx;
+  line-height: 32rpx;
+}
+.journalDetailsPage .directory_preview .title .selected {
+  font-family: 'PingFang-SC-Bold';
+  font-weight: bold;
+  color: #333333;
+  font-size: 32rpx;
+  border-bottom: 8rpx solid #E9200F;
 }
 

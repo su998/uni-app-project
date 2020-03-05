@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": " ",
   "usingComponents": {
-    "voicebtn": "/components/voicebtn"
+    "voicebtn": "/components/voicebtn",
+    "journal-details-page-directory": "/components/journalDetailsPageDirectory",
+    "journal-details-page-preview": "/components/journalDetailsPagePreview"
   }
 }

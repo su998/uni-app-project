@@ -1,0 +1,24 @@
+.subtitle {
+  margin-left: 29rpx;
+}
+.subtitle image {
+  height: 20rpx;
+  width: 38rpx;
+}
+.subtitle text {
+  display: inline-block;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  line-height: 36rpx;
+}
+.directory .directory_item {
+  margin: 0 60rpx;
+  width: 630rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 26rpx;
+  color: #333333;
+  border-bottom: 1rpx solid #E6E6E6;
+  padding-left: 10rpx;
+}
+
