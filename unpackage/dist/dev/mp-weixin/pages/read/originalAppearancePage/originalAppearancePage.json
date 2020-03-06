@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "原貌页",
+  "usingComponents": {
+    "btn-previous-next": "/components/btnPreviousNext",
+    "voicebtn": "/components/voicebtn"
+  }
+}

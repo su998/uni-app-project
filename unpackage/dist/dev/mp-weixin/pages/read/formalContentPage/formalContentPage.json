@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "正文",
+  "usingComponents": {
+    "voicebtn": "/components/voicebtn",
+    "btn-previous-next": "/components/btnPreviousNext"
+  }
+}

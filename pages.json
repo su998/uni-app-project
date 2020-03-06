@@ -7,15 +7,33 @@
 			}
 		},
 		{
-		    "path" : "pages/read/oldList/oldList",
+		    "path" : "pages/read/voiceCategoryPage/voiceCategoryPage",
 		    "style" : {
-				"navigationBarTitleText": "往期列表"
+				"navigationBarTitleText": "热门听书"
+			}
+		},
+		{
+		    "path" : "pages/read/originalAppearancePage/originalAppearancePage",
+		    "style" : {
+				"navigationBarTitleText": "原貌页"
 			}
 		},
 		{
 			"path": "pages/read/journalDetailsPage/journalDetailsPage",
 			"style": {
 				"navigationBarTitleText": " "
+			}
+		},
+		{
+		    "path" : "pages/read/formalContentPage/formalContentPage",
+		    "style" : {
+				"navigationBarTitleText": "正文"
+			}
+		},
+		{
+		    "path" : "pages/read/oldList/oldList",
+		    "style" : {
+				"navigationBarTitleText": "往期列表"
 			}
 		},
 		{
@@ -41,12 +59,14 @@
 			"style": {
 				"navigationBarTitleText": "健康报"
 			}
-		}, {
+		}, 
+		{
 			"path": "pages/myself/myself",
 			"style": {
 				"navigationBarTitleText": "健康报"
 			}
 		}
+
     ],
 	"tabBar": {
 		"height": "78rpx",

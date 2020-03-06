@@ -1,11 +1,10 @@
 <template>
 	<view class="preview">
-		<view class="preview_item"></view>
-		<view class="preview_item"></view>
-		<view class="preview_item"></view>
-		<view class="preview_item"></view>
-		<view class="preview_item"></view>
-		<view class="preview_item"></view>
+			<view class="preview_item"  v-for="(item, index) in originalList" :key="index">
+				<navigator url="/pages/read/originalAppearancePage/originalAppearancePage">
+					<image src="" mode=""></image>
+				</navigator>
+			</view>
 	</view>
 </template>
 
@@ -13,7 +12,16 @@
 	export default {
 		data() {
 			return {
-				
+				originalList: [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+				]
 			};
 		}
 	}
@@ -29,8 +37,12 @@
 		height: 279.3rpx;
 		width: 210rpx;
 		background-color: #ccc;
-		margin-left: 31rpx;
+		margin-left: 29rpx;
 		margin-bottom: 31rpx;
+		image {
+			height: 279.3rpx;
+			width: 210rpx;
+		}
 	}
 }
 </style>

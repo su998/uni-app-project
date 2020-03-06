@@ -7,7 +7,11 @@
 				<text class="more" @click="getMore">查看更多 ></text>
 			</view>
 			<view class="featured_journals_container">
-				<view class="featured_journal_item"></view>
+				<view class="featured_journal_item">
+					<navigator url="./journalDetailsPage/journalDetailsPage">
+						<image src="" mode=""></image>
+					</navigator>
+				</view>
 				<view class="featured_journal_item"></view>
 				<view class="featured_journal_item"></view>
 				<view class="featured_journal_item"></view>
@@ -21,7 +25,9 @@
 		<view class="hot_listenBook">
 			<view class="hot_listenBook_header">
 				<text class="title">热门听书</text>
-				<text class="more">查看更多 ></text>
+				<navigator url="voiceCategoryPage/voiceCategoryPage">
+					<text class="more">查看更多 ></text>
+				</navigator>
 			</view>
 			<view class="hot_listenBook_container">
 				<view class="hot_listenBook_item"></view>
@@ -82,9 +88,13 @@
 			.featured_journal_item {
 				width: 150rpx;
 				height: 200rpx;
-				background-color: #ccc;
+				background-color: #F0AD4E;
 				border-radius: 10rpx;
-				// box-shadow: 3px 3px #ccc;
+				box-shadow: 0 4rpx 8rpx #d0d3d8;
+				image {
+					width: 150rpx;
+					height: 200rpx;
+				}
 			}
 			.featured_journal_item:not(:nth-child(4n)) {
 				margin-right: 30rpx;

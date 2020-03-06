@@ -1,1 +1,1 @@
-<view class="preview"><view class="preview_item"></view><view class="preview_item"></view><view class="preview_item"></view><view class="preview_item"></view><view class="preview_item"></view><view class="preview_item"></view></view>
+<view class="preview"><block wx:for="{{originalList}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="preview_item"><navigator url="/pages/read/originalAppearancePage/originalAppearancePage"><image src mode></image></navigator></view></block></view>

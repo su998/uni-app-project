@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "热门听书",
+  "usingComponents": {
+    "voicebtn": "/components/voicebtn"
+  }
+}

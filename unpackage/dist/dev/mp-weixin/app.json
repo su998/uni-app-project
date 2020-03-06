@@ -1,8 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/read/oldList/oldList",
+    "pages/read/voiceCategoryPage/voiceCategoryPage",
+    "pages/read/originalAppearancePage/originalAppearancePage",
     "pages/read/journalDetailsPage/journalDetailsPage",
+    "pages/read/formalContentPage/formalContentPage",
+    "pages/read/oldList/oldList",
     "pages/read/journalCategoryPage/journalCategoryPage",
     "pages/read/read",
     "pages/elejournal/elejournal",
@@ -50,6 +53,5 @@
     ]
   },
   "permission": {},
-  "usingComponents": {},
-  "sitemapLocation": "sitemap3.json"
+  "usingComponents": {}
 }

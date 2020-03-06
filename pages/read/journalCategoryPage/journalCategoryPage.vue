@@ -223,6 +223,11 @@ page{
 			height: 100%;
 			width: 168rpx;
 			background-color: #FAFAFA;
+			::-webkit-scrollbar {
+			  width: 0;
+			  height: 0;
+			  color: transparent;
+			}
 			.left-scroll-Y {
 	
 				.left-item {
@@ -253,7 +258,11 @@ page{
 			flex-direction: column;
 			margin: 42rpx 26rpx 42rpx 30rpx;
 			overflow-y: auto;
-	
+			::-webkit-scrollbar {
+			  width: 0;
+			  height: 0;
+			  color: transparent;
+			}
 			.right-item {
 				height: 200rpx;
 				width: 526rpx;
@@ -296,24 +305,6 @@ page{
 							text-overflow: ellipsis;
 						}
 					}
-	
-					// .voicebtn {
-					// 	display: inline-block;
-					// 	width: 120rpx;
-					// 	height: 40rpx;
-					// 	line-height: 40rpx;
-					// 	border: 1rpx solid #E9200F;
-					// 	border-radius: 4rpx;
-					// 	font-size: 20rpx;
-					// 	color: #E9200F;
-					// 	display: flex;
-					// 	align-items: center;
-					// 	justify-content: space-around;
-					// 	image {
-					// 		width: 20rpx;
-					// 		height: 18rpx;
-					// 	}
-					// }
 				}
 			}
 		}

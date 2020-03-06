@@ -16,7 +16,7 @@
 						<view>页码:	78页</view>
 					</view>
 					<view class="btn">
-						<navigator url="" class="nowRead ff_bold">立即阅读</navigator>
+						<navigator url="../formalContentPage/formalContentPage" class="nowRead ff_bold">立即阅读</navigator>
 						<navigator url="../oldList/oldList" class="oldList ff_medium">往期列表</navigator>
 					</view>
 					<voicebtn/>

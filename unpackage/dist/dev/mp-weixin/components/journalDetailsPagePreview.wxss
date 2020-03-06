@@ -11,7 +11,11 @@
   height: 279.3rpx;
   width: 210rpx;
   background-color: #ccc;
-  margin-left: 31rpx;
+  margin-left: 29rpx;
   margin-bottom: 31rpx;
+}
+.preview .preview_item image {
+  height: 279.3rpx;
+  width: 210rpx;
 }
 

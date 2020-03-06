@@ -6,10 +6,9 @@
 		</view>
 		<!-- 目录结构 -->
 		<view class="directory">
-			<view class="directory_item ff_medium">健康四川行动启动</view>
-			<view class="directory_item ff_medium">健康四川行动启动</view>
-			<view class="directory_item ff_medium">健康四川行动启动</view>
-			<view class="directory_item ff_medium">健康四川行动启动</view>
+			<view class="directory_item ff_medium" v-for="(item, index) in directoryList" :key="index">
+				{{ item.msg }}
+			</view>
 		</view>
 	</view>
 </template>
@@ -18,7 +17,21 @@
 	export default {
 		data() {
 			return {
-				
+				// 目录列表
+				directoryList: [
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+					{ msg: '健康四川行动启动' },
+				]
 			};
 		}
 	}

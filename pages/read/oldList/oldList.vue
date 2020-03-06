@@ -11,7 +11,9 @@
 		<!-- 主体: 期刊目录 -->
 		<view class="main" :style="{height: navHeight+'px'}">
 			<view class="item" v-for="(item, index) in oldList" :key="index">
-				<view class="img"></view>
+				<navigator url="../journalDetailsPage/journalDetailsPage">
+					<image class="img"></image>
+				</navigator>
 				<text class="text ff_medium">{{item.content}}</text>
 			</view>
 		</view>
@@ -62,7 +64,6 @@
 		methods: {
 			setSelected(i) { // 设置顶部导航激活样式
 				this.currentIndex = i
-				console.log(this.currentIndex)
 			},
 			getUserAgentHeight() {
 				let that = this
@@ -74,8 +75,6 @@
 							let userAgentHeight = that.userAgentHeight
 							that.navHeight =userAgentHeight - data.top  //计算高度：元素高度=窗口高度-元素距离顶部的距离（data.top）
 						}).exec()
-						
-						console.log(that.navHeight)
 					}
 				})
 			},

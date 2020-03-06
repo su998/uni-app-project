@@ -1,0 +1,1 @@
+<view class="originalAppearancePage clearFix"><view class="title ff_medium">2019年7月<text>第8期</text></view><view class="main" style="{{'height:'+(navHeight2+'px')+';'}}"><image src mode></image></view><btn-previous-next vue-id="1" bind:__l="__l"></btn-previous-next><voicebtn class="voicebtn" vue-id="2" bind:__l="__l"></voicebtn></view>

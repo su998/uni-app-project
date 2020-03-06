@@ -1,0 +1,31 @@
+.originalAppearancePage {
+  height: 100%;
+}
+.originalAppearancePage .title {
+  color: #333333;
+  font-size: 30rpx;
+  margin: 29rpx 0 30rpx 37rpx;
+  height: 29rpx;
+}
+.originalAppearancePage .title text {
+  display: inline-block;
+  margin-left: 28rpx;
+}
+.originalAppearancePage .main {
+  background-color: #DD524D;
+  width: 690rpx;
+  height: 933rpx;
+  margin: 0 auto;
+  margin-bottom: 75rpx;
+  border-radius: 10rpx;
+}
+.originalAppearancePage .main image {
+  width: 690rpx;
+  height: 933rpx;
+}
+.originalAppearancePage .voicebtn {
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+}
+

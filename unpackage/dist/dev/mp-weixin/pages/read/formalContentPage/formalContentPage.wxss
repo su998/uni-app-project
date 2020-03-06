@@ -1,0 +1,57 @@
+.formalContentPage {
+  width: 690rpx;
+  margin: 0 auto;
+}
+.formalContentPage .header {
+  margin-top: 30rpx;
+  margin-bottom: 29rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.formalContentPage .header .title {
+  color: #333333;
+  font-size: 36rpx;
+  line-height: 48rpx;
+  letter-spacing: 3rpx;
+}
+.formalContentPage .header .subtitle {
+  margin-top: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.formalContentPage .header .subtitle .left {
+  color: #999999;
+  font-size: 20rpx;
+  letter-spacing: 3rpx;
+  line-height: 48rpx;
+}
+.formalContentPage .main .img {
+  height: 420rpx;
+  width: 690rpx;
+  background-color: #ccc;
+  border-radius: 10rpx;
+}
+.formalContentPage .main .content {
+  width: 690rpx;
+  height: 894rpx;
+  margin-top: 30rpx;
+  margin-bottom: 57rpx;
+  color: #333333;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  letter-spacing: 3rpx;
+  overflow: hidden;
+}
+

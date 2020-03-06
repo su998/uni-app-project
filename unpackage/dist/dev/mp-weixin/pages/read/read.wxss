@@ -34,8 +34,13 @@
 .read .featured_journals .featured_journals_container .featured_journal_item {
   width: 150rpx;
   height: 200rpx;
-  background-color: #ccc;
+  background-color: #F0AD4E;
   border-radius: 10rpx;
+  box-shadow: 0 4rpx 8rpx #d0d3d8;
+}
+.read .featured_journals .featured_journals_container .featured_journal_item image {
+  width: 150rpx;
+  height: 200rpx;
 }
 .read .featured_journals .featured_journals_container .featured_journal_item:not(:nth-child(4n)) {
   margin-right: 30rpx;

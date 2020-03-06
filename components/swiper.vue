@@ -12,17 +12,17 @@
 		 >
 			<swiper-item>
 				<view class="swiper-item">
-					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="scaleToFill"></image>
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="widthFix"></image>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item">
-					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="scaleToFill"></image>
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="widthFix"></image>
 				</view>
 			</swiper-item>
 			<swiper-item>
 				<view class="swiper-item">
-					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="scaleToFill"></image>
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" mode="widthFix"></image>
 				</view>
 			</swiper-item>
 		</swiper>

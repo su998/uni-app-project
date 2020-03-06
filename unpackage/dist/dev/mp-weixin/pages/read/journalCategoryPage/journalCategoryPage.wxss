@@ -12,6 +12,11 @@ page .journalCategoryPage .left {
   width: 168rpx;
   background-color: #FAFAFA;
 }
+page .journalCategoryPage .left ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
 page .journalCategoryPage .left .left-scroll-Y .left-item {
   height: 100rpx;
   line-height: 100rpx;
@@ -39,6 +44,11 @@ page .journalCategoryPage .right {
           flex-direction: column;
   margin: 42rpx 26rpx 42rpx 30rpx;
   overflow-y: auto;
+}
+page .journalCategoryPage .right ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
 }
 page .journalCategoryPage .right .right-item {
   height: 200rpx;
