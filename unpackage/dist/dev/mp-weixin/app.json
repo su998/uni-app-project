@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/read/voiceDetailsPage/voiceDetailsPage",
     "pages/read/voiceCategoryPage/voiceCategoryPage",
     "pages/read/originalAppearancePage/originalAppearancePage",
     "pages/read/journalDetailsPage/journalDetailsPage",
@@ -53,5 +54,6 @@
     ]
   },
   "permission": {},
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap64.json"
 }

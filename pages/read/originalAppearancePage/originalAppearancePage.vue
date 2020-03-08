@@ -6,7 +6,7 @@
 		<view class="main" :style="{height: navHeight2+'px'}">
 			<image src="" mode=""></image>
 		</view>
-		<btn-previous-next/>
+		<btn-previous-next class="bottombtn"/>
 		<voicebtn class="voicebtn"/>
 	</view>
 </template>
@@ -52,6 +52,14 @@
 			width: 690rpx;
 			height: 933rpx;
 		}
+	}
+	.bottombtn {
+		position: fixed;
+		bottom: 0;
+		// 苹果X底部安全区域
+		padding-bottom: constant(safe-area-inset-bottom);  
+		    padding-bottom: env(safe-area-inset-bottom); 
+		    box-sizing: content-box;
 	}
 	.voicebtn {
 		position: absolute;

@@ -15,7 +15,7 @@
 			<scroll-view scroll-Y="true" class="right-scroll-Y" :style="{height: detailsHeight+'px'}">
 			<view class="right-item" v-for="(item, index) in bookslist" :key="index">
 				<!-- 左边书籍封面 -->
-				<navigator url="">
+				<navigator url="../voiceDetailsPage/voiceDetailsPage">
 					<view class="img clearFix">
 						<!-- <image></image> -->
 						<image class="logo" src="../../../static/images/read/听书标签@2x.png" mode=""></image>

@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": " ",
+  "navigationBarTitleText": "",
   "usingComponents": {
     "voicebtn": "/components/voicebtn",
     "journal-details-page-directory": "/components/journalDetailsPageDirectory",

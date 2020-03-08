@@ -7,6 +7,13 @@
 			}
 		},
 		{
+		    "path" : "pages/read/voiceDetailsPage/voiceDetailsPage",
+		    "style" : {
+				"navigationBarTitleText": ""
+			}
+		},
+		
+		{
 		    "path" : "pages/read/voiceCategoryPage/voiceCategoryPage",
 		    "style" : {
 				"navigationBarTitleText": "热门听书"
@@ -21,7 +28,7 @@
 		{
 			"path": "pages/read/journalDetailsPage/journalDetailsPage",
 			"style": {
-				"navigationBarTitleText": " "
+				"navigationBarTitleText": ""
 			}
 		},
 		{
