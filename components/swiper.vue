@@ -47,19 +47,23 @@
 		  height: 294rpx;
 		  margin: 20rpx 0rpx;
 		  background-color: #FFFFFF;
-		.swiper-item{
-			height: 294rpx;
-			margin: 0 10rpx;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			image {
-				width: 690rpx;
-				height: 294rpx;
-				background-color: #ffffff;
-				border-radius: 10rpx;
-			}
-		}
+		  swiper-item{
+			 .swiper-item{
+			 	height: 294rpx;
+			 	margin: 0 10rpx;
+			 	display: flex;
+			 	justify-content: center;
+			 	align-items: center;
+			 	border-radius: 10rpx;
+			 	image {
+			 		width: 690rpx;
+			 		height: 294rpx;
+			 		background-color: #ffffff;
+			 		border-radius: 10rpx;
+			 	}
+			 } 
+		  }
+		
 	}
 }
 </style>

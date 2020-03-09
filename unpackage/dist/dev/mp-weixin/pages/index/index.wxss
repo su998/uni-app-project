@@ -1,1 +1,71 @@
+.featured .main {
+  width: 690rpx;
+  margin: 40rpx 30rpx 40rpx 30rpx;
+}
+.featured .main .item {
+  height: 200rpx;
+  margin-bottom: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  border-bottom: 1rpx solid #E0E0E0;
+}
+.featured .main .item .left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.featured .main .item .left .title {
+  width: 429rpx;
+  font-family: PingFangSC-Regular;
+  color: #333333;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  letter-spacing: 3rpx;
+}
+.featured .main .item .left .fromtime {
+  padding-bottom: 40rpx;
+  font-family: PingFangSC-Regular;
+  color: #999999;
+  font-size: 20rpx;
+  letter-spacing: 3rpx;
+}
+.featured .main .item .left .fromtime .time {
+  margin-left: 40rpx;
+}
+.featured .main .item .right {
+  width: 240rpx;
+  height: 160rpx;
+  background-color: #F0AD4E;
+}
+.featured .main .item .right image {
+  width: 240rpx;
+  height: 160rpx;
+}
+.featured .main .advertisement {
+  height: 240rpx;
+  width: 690rpx;
+  border-bottom: 1rpx solid #E0E0E0;
+}
+.featured .main .advertisement .swiper {
+  height: 230rpx;
+}
+.featured .main .advertisement .swiper .swiper-item {
+  width: 690rpx;
+  height: 160rpx;
+}
+.featured .main .advertisement .swiper .swiper-item image {
+  width: 690rpx;
+  height: 160rpx;
+}
 

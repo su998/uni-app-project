@@ -10,14 +10,16 @@
 }
 .nav .nav_item {
   font-size: 15px;
-  font-weight: Medium;
   color: #333333;
-  font-family: 'PingFangSC-Medium';
+  letter-spacing: 3rpx;
 }
 .nav .nav_item_selected {
   color: #E9200F;
   font-size: 18px;
   font-family: 'PingFangSC-Medium';
-  font-weight: Medium;
+  font-weight: 600;
+  letter-spacing: 3rpx;
+  border-bottom: 4rpx solid #E9200F;
+  border-radius: 2rpx;
 }
 

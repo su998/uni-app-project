@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App'
 import store from './store/index.js'
+import {myRequest} from './api/request.js'
 Vue.prototype.$store = store
+Vue.prototype.$request = myRequest
 Vue.config.productionTip = false
 
 App.mpType = 'app'

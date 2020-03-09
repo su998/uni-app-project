@@ -1,3 +1,6 @@
+.voiceDetailsPage {
+  overflow-x: hidden;
+}
 .voiceDetailsPage .header {
   width: 100%;
   padding: 30rpx 30rpx 40rpx 30rpx;
@@ -71,5 +74,47 @@
   width: 100%;
   height: 10rpx;
   background-color: #F7F7F7;
+}
+.voiceDetailsPage .directory_wrapper .section {
+  width: 691rpx;
+  margin: 29rpx 29rpx 14rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+.voiceDetailsPage .directory_wrapper .section .total {
+  color: #333333;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  letter-spacing: 3rpx;
+}
+.voiceDetailsPage .directory_wrapper .section .choice {
+  color: #333333;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  letter-spacing: 3rpx;
+}
+.voiceDetailsPage .directory_wrapper .section .choice image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.voiceDetailsPage .directory_wrapper .directory .item {
+  width: 690rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-left: 10rpx;
+  color: #333333;
+  font-size: 26rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+.voiceDetailsPage .directory_wrapper .directory .item .title {
+  display: inline-block;
+  margin-left: 30rpx;
 }
 

@@ -1,6 +1,6 @@
 <template>
 	<view class="nav">
-		<navigator class="nav_item" :class="{nav_item_selected: index===currentIndex}" @click="seleted(index)" v-for="(item, index) in navlist" :key="index" :url="item.url" hover-class="navigator-hover">
+		<navigator class="nav_item ff_medium" :class="{nav_item_selected: index===currentIndex}" @click="seleted(index)" v-for="(item, index) in navlist" :key="index" :url="item.url" hover-class="navigator-hover">
 			 {{item.text}}
 		</navigator>
 	</view>
@@ -38,15 +38,17 @@
 		justify-content: space-around;
 		.nav_item {
 			font-size: 15px;
-			font-weight: Medium;
 			color: #333333;
-			font-family: 'PingFangSC-Medium';
+			letter-spacing: 3rpx;
 		}
 		.nav_item_selected {
 			color: #E9200F;
 			font-size: 18px;
 			font-family: 'PingFangSC-Medium';
-			font-weight: Medium;
+			font-weight: 600;
+			letter-spacing: 3rpx;
+			border-bottom: 4rpx solid #E9200F;
+			border-radius: 2rpx;
 		}
 	}
 </style>
