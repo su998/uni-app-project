@@ -168,22 +168,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
-    return {};
-
-
+    return {
+      HotBookList: [], // 热门精选列表
+      HotVoiceList: [] // 热门听书列表
+    };
+  },
+  onLoad: function onLoad() {
+    this.getHotBookList();
   },
   methods: {
     // 查看更多
@@ -191,6 +185,21 @@ var _default =
       uni.navigateTo({
         url: './journalCategoryPage/journalCategoryPage' });
 
+    },
+    // 获取热门书籍列表
+    getHotBookList: function getHotBookList() {var _this = this;
+      uni.showLoading({
+        title: '加载中' });
+
+      this.$request({
+        url: 'module.selected.list',
+        data: { param: { "use_https": "1", "cover_format": "s", "token": "", "page_num": "1", "page_limit": 10 } } }).
+      then(function (res) {
+        _this.HotBookList = res.column_info[0];
+        _this.HotVoiceList = res.column_info[1];
+        console.log(_this.HotVoiceList);
+        uni.hideLoading();
+      });
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

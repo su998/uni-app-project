@@ -4,28 +4,29 @@
 		<view class="left">
 			<scroll-view scroll-Y="true" class="left-scroll-Y" :style="{height: navHeight+'px'}">
 				<view class="left-item" :class="{selected: currentIndex === index}" v-for="(item, index) in leftNav" :key="index"
-				 @click="leftNavSelected(index)">
-					<text>{{item.title}}</text>
+				 @click="leftNavSelected(index, item.class_id)">
+					<text>{{item.class_name}}</text>
 				</view>
 			</scroll-view>
 		</view>
 
 		<!-- 右边书籍 -->
+		<!-- <booklist :categoryId='categoryId'/> -->
 		<view class="right">
 			<scroll-view scroll-Y="true" class="right-scroll-Y" :style="{height: detailsHeight+'px'}">
-			<view class="right-item" v-for="(item, index) in bookslist" :key="index">
+			<view class="right-item" v-for="item in bookslist" :key="item.magazine_id">
 				<!-- 左边书籍封面 -->
 				<navigator url="../journalDetailsPage/journalDetailsPage">
 					<view class="img">
-						<!-- <image></image> -->
+						<image :src="item.lastest_image" mode="aspectFill"></image>
 					</view>
 				</navigator>
 				<!-- 右边详情 -->
 				<view class="details">
-					<view class="title">{{item.title}}</view>
+					<view class="title">{{item.magazine_name}}</view>
 					<view class="content">
 						<text>
-							{{item.content}}
+							{{item.description}}
 						</text>
 					</view>
 					<voicebtn/>
@@ -33,151 +34,31 @@
 			</view>
 			</scroll-view>
 		</view>
+		
 	</view>
 </template>
 
 <script>
+	// import booklist from '@/components/categoryPageBookList.vue'
 	import voicebtn from '@/components/voicebtn.vue'
 	export default {
 		data() {
 			return {
-				// 左侧导航
-				leftNav: [{
-						title: '全部分类'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-					{
-						title: '新闻人物'
-					},
-				],
+				leftNav: [], // 左侧导航
+				bookslist: [], // 书籍列表
 				currentIndex: 0, // 左侧导航当前下标
-				// 书籍列表
-				bookslist: [{
-						imgurl: '',
-						title: '财经',
-						content: '从本质上来讲，《易经》是阐述关于变化之书，长期被用作“卜筮”。后人多学习其哲理，因而成为一部博大精深的辩证法哲学书。“卜筮”就是对未来事态的发展进行预测，而《易经》便是总结这些预测的规律理论的书。《易经》含盖万有，纲纪群伦，是中国传统文化的杰出代表；广大精微，包罗万象，亦是中华文明的源头活水。其内容涉及哲学、政治、生活、文学、艺术、科学等诸多领域，是群经之首，儒家、道家共同的经典。'
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: '从本质上来讲，《易经》是阐述关于变化之书，长期被用作“卜筮”。后人多学习其哲理，因而成为一部博大精深的辩证法哲学书。“卜筮”就是对未来事态的发展进行预测，而《易经》便是总结这些预测的规律理论的书。《易经》含盖万有，纲纪群伦，是中国传统文化的杰出代表；广大精微，包罗万象，亦是中华文明的源头活水。其内容涉及哲学、政治、生活、文学、艺术、科学等诸多领域，是群经之首，儒家、道家共同的经典。'
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: '从本质上来讲，《易经》是阐述关于变化之书，长期被用作“卜筮”。后人多学习其哲理，因而成为一部博大精深的辩证法哲学书。“卜筮”就是对未来事态的发展进行预测，而《易经》便是总结这些预测的规律理论的书。《易经》含盖万有，纲纪群伦，是中国传统文化的杰出代表；广大精微，包罗万象，亦是中华文明的源头活水。其内容涉及哲学、政治、生活、文学、艺术、科学等诸多领域，是群经之首，儒家、道家共同的经典。'
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: '从本质上来讲，《易经》是阐述关于变化之书，长期被用作“卜筮”。后人多学习其哲理，因而成为一部博大精深的辩证法哲学书。“卜筮”就是对未来事态的发展进行预测，而《易经》便是总结这些预测的规律理论的书。《易经》含盖万有，纲纪群伦，是中国传统文化的杰出代表；广大精微，包罗万象，亦是中华文明的源头活水。其内容涉及哲学、政治、生活、文学、艺术、科学等诸多领域，是群经之首，儒家、道家共同的经典。'
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: '从本质上来讲，《易经》是阐述关于变化之书，长期被用作“卜筮”。后人多学习其哲理，因而成为一部博大精深的辩证法哲学书。“卜筮”就是对未来事态的发展进行预测，而《易经》便是总结这些预测的规律理论的书。《易经》含盖万有，纲纪群伦，是中国传统文化的杰出代表；广大精微，包罗万象，亦是中华文明的源头活水。其内容涉及哲学、政治、生活、文学、艺术、科学等诸多领域，是群经之首，儒家、道家共同的经典。'
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: '从本质上来讲，《易经》是阐述关于变化之书，长期被用作“卜筮”。后人多学习其哲理，因而成为一部博大精深的辩证法哲学书。“卜筮”就是对未来事态的发展进行预测，而《易经》便是总结这些预测的规律理论的书。《易经》含盖万有，纲纪群伦，是中国传统文化的杰出代表；广大精微，包罗万象，亦是中华文明的源头活水。其内容涉及哲学、政治、生活、文学、艺术、科学等诸多领域，是群经之首，儒家、道家共同的经典。'
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: '从本质上来讲，《易经》是阐述关于变化之书，长期被用作“卜筮”。后人多学习其哲理，因而成为一部博大精深的辩证法哲学书。“卜筮”就是对未来事态的发展进行预测，而《易经》便是总结这些预测的规律理论的书。《易经》含盖万有，纲纪群伦，是中国传统文化的杰出代表；广大精微，包罗万象，亦是中华文明的源头活水。其内容涉及哲学、政治、生活、文学、艺术、科学等诸多领域，是群经之首，儒家、道家共同的经典。'
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: ''
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: ''
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: ''
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: ''
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: ''
-					},
-					{
-						imgurl: '',
-						title: '财经',
-						content: ''
-					},
-				],
-				// 用户手机高度
-				userAgentHeight: 0,
-				// 元素所需高度
-				navHeight:0,
-				// 右边盒子所需高度
-				detailsHeight: 0
+				userAgentHeight: 0,	// 用户手机高度
+				navHeight:0,  // 元素所需高度
+				detailsHeight: 0, // 右边盒子所需高度
+				categoryId: '12360'
 			};
 		},
 		components: {
-			voicebtn
+		   voicebtn
+		},
+		onLoad() {
+			this.getCateGoryList()
+			this.getBooksList()
 		},
 		onReady() {
 			this.getUserAgentHeight()
@@ -196,19 +77,44 @@
 						}).exec()
 						let rightScroll = uni.createSelectorQuery().select(".right-scroll-Y");
 						rightScroll.boundingClientRect(data=>{
-							let userAgentHeight = that.userAgentHeight
-							that.detailsHeight =userAgentHeight - data.top  //计算高度：元素高度=窗口高度-元素距离顶部的距离（data.top）
+						let userAgentHeight = that.userAgentHeight
+						that.detailsHeight = userAgentHeight - data.top  //计算高度：元素高度=窗口高度-元素距离顶部的距离（data.top）
 						}).exec()
-						// console.log(that.navHeight)
-						// console.log(that.detailsHeight)
 					}
 				})
 			},
 			// 点击左导航
-			leftNavSelected(index) {
+			leftNavSelected(index, id) {
 				// 触发选中样式
 				this.currentIndex = index
-			}
+				this.categoryId = id
+				this.getBooksList()
+			},
+			// 获取左侧导航
+			getCateGoryList() {
+				this.$request({
+					url: 'magazine.class.get',
+					data: {param:{"cover_format":"m","token":"","use_https":1} }
+				}).then(res => {
+					this.leftNav = res.class_list
+					console.log(res)
+				})
+			},
+			// 获取右侧书籍
+			getBooksList() {
+				console.log(this.categoryId)
+				uni.showLoading({
+					title: '加载中'
+				})
+				this.$request({
+					url: 'magazine.class.item.list',
+					data: {param:{"class_id":this.categoryId,"use_article":"1","cover_format":"s","page_num":1,"page_limit":"10","token":"","use_https":"0","use_all":0}}
+				}).then(res => {
+					this.bookslist = res.magazine_list
+					uni.hideLoading()
+					console.log(res)
+				})
+			},
 		}
 	}
 </script>
@@ -252,17 +158,21 @@ page{
 		}
 	
 		// 右边主体
+		.right::-webkit-scrollbar {
+		    display: none;
+		}
 		.right {
 			// flex: 1;
 			display: flex;
 			flex-direction: column;
-			margin: 42rpx 26rpx 42rpx 30rpx;
+			padding: 42rpx 26rpx 42rpx 30rpx;
 			overflow-y: auto;
 			::-webkit-scrollbar {
 			  width: 0;
 			  height: 0;
 			  color: transparent;
 			}
+			
 			.right-item {
 				height: 200rpx;
 				width: 526rpx;
@@ -272,7 +182,11 @@ page{
 				.img {
 					width: 150rpx;
 					height: 200rpx;
-					background-color: #ccc;
+					background-color: #F0AD4E;
+					image {
+						width: 150rpx;
+						height: 200rpx;
+					}
 				}
 	
 				.details {

@@ -42,6 +42,7 @@
 <style lang="less">
 .swiper_container{
 	position: relative;
+	margin-top: 110rpx;
 	.swiper{
 		  width: 100%;
 		  height: 294rpx;

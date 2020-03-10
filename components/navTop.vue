@@ -31,6 +31,10 @@
 
 <style lang="less">
 	.nav {
+		position: fixed;
+		top: 0;
+		background-color: #fff;
+		z-index: 99;
 		display: flex;
 		width: 100%;
 		height: 44px;

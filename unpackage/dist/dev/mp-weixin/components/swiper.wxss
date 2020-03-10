@@ -1,5 +1,6 @@
 .swiper_container {
   position: relative;
+  margin-top: 110rpx;
 }
 .swiper_container .swiper {
   width: 100%;

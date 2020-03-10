@@ -1,4 +1,8 @@
 .nav {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  z-index: 99;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;

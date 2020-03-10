@@ -79,8 +79,12 @@
 .read .hot_listenBook .hot_listenBook_container .hot_listenBook_item {
   width: 150rpx;
   height: 200rpx;
-  background-color: #ccc;
   border-radius: 10rpx;
+  box-shadow: 0 4rpx 8rpx #d0d3d8;
+}
+.read .hot_listenBook .hot_listenBook_container .hot_listenBook_item image {
+  width: 150rpx;
+  height: 200rpx;
 }
 .read .hot_listenBook .hot_listenBook_container .hot_listenBook_item:not(:nth-child(4n)) {
   margin-right: 30rpx;

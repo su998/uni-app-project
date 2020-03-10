@@ -190,6 +190,51 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
   data: function data() {
     return {};
@@ -199,14 +244,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   components: {
     navTop: navTop, myswiper: myswiper },
 
-  onReady: function onReady() {
-    this.$request({
-      url: '&param={"use_https":"1","cover_format":"s","token":"","resource_id":"37782","item_id":"0"}' }).
-
-    then(function (res) {
-      console.log(res);
-    });
-  },
   methods: {} };exports.default = _default;
 
 /***/ }),

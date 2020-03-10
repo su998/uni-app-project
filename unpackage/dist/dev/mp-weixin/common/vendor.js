@@ -8525,7 +8525,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "健康报", "enablePullDownRefresh": true, "usingComponents": { "nav-top": "/components/navTop", "swiper": "/components/swiper" }, "usingAutoImportComponents": {} }, "pages/read/journalDetailsPage/journalDetailsPage": { "navigationBarTitleText": "", "usingComponents": { "voicebtn": "/components/voicebtn", "journal-details-page-directory": "/components/journalDetailsPageDirectory", "journal-details-page-preview": "/components/journalDetailsPagePreview" }, "usingAutoImportComponents": {} }, "pages/read/voiceDetailsPage/voiceDetailsPage": { "navigationBarTitleText": "", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/read/voiceCategoryPage/voiceCategoryPage": { "navigationBarTitleText": "热门听书", "usingComponents": { "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/read/originalAppearancePage/originalAppearancePage": { "navigationBarTitleText": "原貌页", "usingComponents": { "btn-previous-next": "/components/btnPreviousNext", "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/read/formalContentPage/formalContentPage": { "navigationBarTitleText": "正文", "usingComponents": { "voicebtn": "/components/voicebtn", "btn-previous-next": "/components/btnPreviousNext" }, "usingAutoImportComponents": {} }, "pages/read/oldList/oldList": { "navigationBarTitleText": "往期列表", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/read/journalCategoryPage/journalCategoryPage": { "navigationBarTitleText": "精选期刊", "usingComponents": { "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/read/read": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/elejournal/elejournal": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/myself/myself": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/read/voicePlay/voicePlay": { "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#FAFAFA", "backgroundColor": "#FFFFFF" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "健康报", "enablePullDownRefresh": true }, "pages/read/journalDetailsPage/journalDetailsPage": { "navigationBarTitleText": "" }, "pages/read/voiceDetailsPage/voiceDetailsPage": { "navigationBarTitleText": "" }, "pages/read/voiceCategoryPage/voiceCategoryPage": { "navigationBarTitleText": "热门听书" }, "pages/read/originalAppearancePage/originalAppearancePage": { "navigationBarTitleText": "原貌页" }, "pages/read/formalContentPage/formalContentPage": { "navigationBarTitleText": "正文" }, "pages/read/oldList/oldList": { "navigationBarTitleText": "往期列表" }, "pages/read/journalCategoryPage/journalCategoryPage": { "navigationBarTitleText": "精选期刊" }, "pages/read/read": { "navigationBarTitleText": "健康报" }, "pages/elejournal/elejournal": { "navigationBarTitleText": "健康报" }, "pages/myself/myself": { "navigationBarTitleText": "健康报" }, "pages/read/voicePlay/voicePlay": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#FAFAFA", "backgroundColor": "#FFFFFF" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
@@ -9646,12 +9646,11 @@ var index_esm = {
 
 var _jsMd = _interopRequireDefault(__webpack_require__(/*! js-md5 */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} // uni.request封装
 // sign
-var signfn = function signfn() {// 方法
-  var act = 'newspaper.item.article.catalog.get';
-
+var signfn = function signfn(action) {var app_key = 'e70891ddafa5e012828c143390cdad9e';
+  var key = 'c733e71b9b83908fc7278f04ea0b6bfc';
+  var act = action;
   // 时间戳
   var ts = function ts(_) {return new Date().getTime().toString();};
-
   // 随机32位数
   var nonce = function nonce() {
     var arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'A', 'B', 'C', 'D', 'E'];
@@ -9662,38 +9661,54 @@ var signfn = function signfn() {// 方法
     }
     return res;
   };
-  // app_key
-  var app_key = 'e70891ddafa5e012828c143390cdad9e';
-
-  var signobj = { act: act, 'ts': ts(), 'nonce': nonce(), app_key: app_key };
-  var sorted = {}; // 排好序的ksort
-  var keys = Object.keys(signobj).sort(function (a, b) {return a - b;}); // 键值排序
-  keys.forEach(function (key) {
-    sorted[key] = signobj[key];
-  });
+  function getSign(params, app_key, key) {
+    if (typeof params == "string") {
+      return paramsStrSort(params);
+    } else if (typeof params == "object") {
+      var arr = [];
+      for (var i in params) {
+        arr.push(i + "=" + params[i]);
+      }
+      return paramsStrSort(arr.join("&"));
+    }
+  }
+  function paramsStrSort(paramsStr) {
+    var url = paramsStr;
+    var arr = [];
+    var p = url.split("&");
+    for (var i in p) {
+      var temp_arr = p[i].split("=");
+      arr.push(temp_arr[0].toLowerCase() + "=" + temp_arr[1]);
+    }
+    var urlStr = arr.sort().join("&");
+    var newUrl = urlStr + '&key=' + key;
+    return (0, _jsMd.default)(newUrl);
+  }
+  var params = { act: act, 'ts': ts(), 'nonce': nonce(), app_key: app_key };
   // 转成字符串
-  var signstr = JSON.stringify(sorted);
-  var signstr1 = signstr + '&key=c733e71b9b83908fc7278f04ea0b6bfc';
-  var finalsign = signstr1.replace(/{|}|"/g, '').replace(':', '=').replace(',', '&');
-  return (0, _jsMd.default)(finalsign);
+  var signstr = JSON.stringify(params);
+  var finalsign = signstr.replace(/{|}|"/g, '').replace(/:/g, '=').replace(/,/g, '&');
+  var sign = getSign(params, app_key, key);
+  return finalsign + '&sign=' + sign;
 };
-var sign = signfn();
+
 
 var BASE_URL = 'https://apis.183read.cc/wx_api/v1/?';
 
 var myRequest = function myRequest(options) {
   return new Promise(function (resovle, reject) {
     uni.request({
-      url: BASE_URL + sign + options.url,
+
+      url: BASE_URL + signfn(options.url),
       method: options.method || 'GET',
       data: options.data || {},
       success: function success(res) {
-        if (res.data.status !== 0) {
+        if (res.data.status_info.status_code !== 100) {
           return uni.showToast({
             title: '获取数据失败' });
 
         }
-        resovle(res);
+        resovle(res.data);
       },
       fail: function fail(err) {
         uni.showToast({

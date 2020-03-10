@@ -53,12 +53,12 @@
   height: 160rpx;
 }
 .featured .main .advertisement {
-  height: 240rpx;
+  height: 208rpx;
   width: 690rpx;
   border-bottom: 1rpx solid #E0E0E0;
 }
 .featured .main .advertisement .swiper {
-  height: 230rpx;
+  height: 214rpx;
 }
 .featured .main .advertisement .swiper .swiper-item {
   width: 690rpx;

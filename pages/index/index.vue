@@ -49,6 +49,51 @@
 			</view>
 			
 		</view>
+		
+		<view class="main">
+			<!-- 第一篇文章 -->
+			<view class="item">
+				<view class="left">
+					<view class="title ">天文学家们把正在形成的最年轻的星体称为“蓝星”</view>
+					<view class="fromtime">
+						<text class="from">健康报</text>
+						<text class="time">刚刚</text>
+					</view>
+				</view>
+				<!-- 封面 -->
+				<view class="right">
+					<image src="" mode=""></image>
+				</view>
+			</view>
+			<!-- 第2篇文章 -->
+			<view class="item">
+				<view class="left">
+					<view class="title ">天文学家们把正在形成的最年轻的星体称为“蓝星”</view>
+					<view class="fromtime">
+						<text class="from">健康报</text>
+						<text class="time">刚刚</text>
+					</view>
+				</view>
+				<view class="right">
+					<image src="" mode=""></image>
+				</view>
+			</view>
+			<!-- 广告区域 -->
+			<view class="advertisement">
+				<swiper class="swiper" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+					<swiper-item>
+						<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" class="swiper-item" mode="aspectFill"></image>
+					</swiper-item>
+					<swiper-item>
+						<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" class="swiper-item" mode="aspectFill"></image>
+					</swiper-item>
+					<swiper-item>
+						<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg" class="swiper-item" mode="aspectFill"></image>
+					</swiper-item>
+				</swiper>
+			</view>
+			
+		</view>
 	</view>
 </template>
 
@@ -63,14 +108,6 @@
 		},
 		components: {
 			navTop, myswiper
-		},
-		onReady() {
-			this.$request({
-				url: '&param={"use_https":"1","cover_format":"s","token":"","resource_id":"37782","item_id":"0"}',
-			})
-			.then(res => {
-				console.log(res)
-			})
 		},
 		methods: {
 
@@ -124,11 +161,11 @@
 		}
 		// 广告轮播
 		.advertisement {
-			height: 240rpx;
+			height: 208rpx;
 			width: 690rpx;
 			border-bottom: 1rpx solid #E0E0E0;
 			.swiper{
-				height: 230rpx;
+				height: 214rpx;
 				.swiper-item{
 					width: 690rpx;
 					height: 160rpx;
