@@ -4,7 +4,7 @@
 		<view class="left">
 			<scroll-view scroll-Y="true" class="left-scroll-Y" :style="{height: navHeight+'px'}">
 				<view class="left-item" :class="{selected: currentIndex === index}" v-for="(item, index) in leftNav" :key="index"
-				 @click="leftNavSelected(index, item.class_id)">
+				 @click="getBooksList(item.use_all, index, item.class_id)" @change="resetpage">
 					<text>{{item.class_name}}</text>
 				</view>
 			</scroll-view>
@@ -13,7 +13,7 @@
 		<!-- 右边书籍 -->
 		<!-- <booklist :categoryId='categoryId'/> -->
 		<view class="right">
-			<scroll-view scroll-Y="true" class="right-scroll-Y" :style="{height: detailsHeight+'px'}">
+			<scroll-view scroll-Y="true" class="right-scroll-Y" @scrolltolower="nextPage" lower-threshold=50 :style="{height: detailsHeight+'px'}">
 			<view class="right-item" v-for="item in bookslist" :key="item.magazine_id">
 				<!-- 左边书籍封面 -->
 				<navigator url="../journalDetailsPage/journalDetailsPage">
@@ -50,7 +50,8 @@
 				userAgentHeight: 0,	// 用户手机高度
 				navHeight:0,  // 元素所需高度
 				detailsHeight: 0, // 右边盒子所需高度
-				categoryId: '12360'
+				page_num: 1, // 当前页数
+				use_all: 1
 			};
 		},
 		components: {
@@ -58,7 +59,7 @@
 		},
 		onLoad() {
 			this.getCateGoryList()
-			this.getBooksList()
+			this.getBooksList(1, 0)
 		},
 		onReady() {
 			this.getUserAgentHeight()
@@ -83,13 +84,7 @@
 					}
 				})
 			},
-			// 点击左导航
-			leftNavSelected(index, id) {
-				// 触发选中样式
-				this.currentIndex = index
-				this.categoryId = id
-				this.getBooksList()
-			},
+
 			// 获取左侧导航
 			getCateGoryList() {
 				this.$request({
@@ -97,24 +92,42 @@
 					data: {param:{"cover_format":"m","token":"","use_https":1} }
 				}).then(res => {
 					this.leftNav = res.class_list
+					this.leftNav.unshift({'class_name':'全部分类',"use_all":1} )
 					console.log(res)
 				})
 			},
+			// 重置页数
+			resetpage() {
+				this.page_num = 1
+			},
 			// 获取右侧书籍
-			getBooksList() {
-				console.log(this.categoryId)
+			getBooksList(use_all, index, id) {
+				console.log(`第${this.page_num}页`)
+				this.currentIndex = index
+				this.use_all = use_all
 				uni.showLoading({
 					title: '加载中'
 				})
 				this.$request({
 					url: 'magazine.class.item.list',
-					data: {param:{"class_id":this.categoryId,"use_article":"1","cover_format":"s","page_num":1,"page_limit":"10","token":"","use_https":"0","use_all":0}}
+					data: {param:{"class_id":id, "use_article":"1","cover_format":"s","page_num":this.page_num,"page_limit":"10","token":"","use_https":"0",use_all}}
 				}).then(res => {
-					this.bookslist = res.magazine_list
+					if (this.page_num===1) {
+						this.bookslist.length=0
+						this.bookslist = res.magazine_list
+					} else {
+						this.bookslist = [...this.bookslist, ...res.magazine_list]
+					}
 					uni.hideLoading()
-					console.log(res)
+				}).catch(err => {
+					console.log(err)
 				})
 			},
+			// 到底部加载下一页
+			nextPage() {
+				this.page_num++
+				this.getBooksList(this.use_all)
+			}
 		}
 	}
 </script>

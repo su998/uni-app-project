@@ -7612,7 +7612,7 @@ module.exports = g;
 /***/ }),
 /* 4 */
 /*!*********************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/pages.json ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/pages.json ***!
   \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8519,18 +8519,18 @@ module.exports = {"_from":"@dcloudio/uni-stat@alpha","_id":"@dcloudio/uni-stat@2
 /***/ }),
 /* 7 */
 /*!**************************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/pages.json?{"type":"style"} ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/pages.json?{"type":"style"} ***!
   \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "健康报", "enablePullDownRefresh": true }, "pages/read/journalDetailsPage/journalDetailsPage": { "navigationBarTitleText": "" }, "pages/read/voiceDetailsPage/voiceDetailsPage": { "navigationBarTitleText": "" }, "pages/read/voiceCategoryPage/voiceCategoryPage": { "navigationBarTitleText": "热门听书" }, "pages/read/originalAppearancePage/originalAppearancePage": { "navigationBarTitleText": "原貌页" }, "pages/read/formalContentPage/formalContentPage": { "navigationBarTitleText": "正文" }, "pages/read/oldList/oldList": { "navigationBarTitleText": "往期列表" }, "pages/read/journalCategoryPage/journalCategoryPage": { "navigationBarTitleText": "精选期刊" }, "pages/read/read": { "navigationBarTitleText": "健康报" }, "pages/elejournal/elejournal": { "navigationBarTitleText": "健康报" }, "pages/myself/myself": { "navigationBarTitleText": "健康报" }, "pages/read/voicePlay/voicePlay": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#FAFAFA", "backgroundColor": "#FFFFFF" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "健康报", "enablePullDownRefresh": true, "usingComponents": { "nav-top": "/components/navTop", "myswiper": "/components/swiper" }, "usingAutoImportComponents": {} }, "pages/read/journalDetailsPage/journalDetailsPage": { "navigationBarTitleText": "", "usingComponents": { "voicebtn": "/components/voicebtn", "journal-details-page-directory": "/components/journalDetailsPageDirectory", "journal-details-page-preview": "/components/journalDetailsPagePreview" }, "usingAutoImportComponents": {} }, "pages/read/voiceDetailsPage/voiceDetailsPage": { "navigationBarTitleText": "", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/read/voiceCategoryPage/voiceCategoryPage": { "navigationBarTitleText": "热门听书", "usingComponents": { "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/read/originalAppearancePage/originalAppearancePage": { "navigationBarTitleText": "原貌页", "usingComponents": { "btn-previous-next": "/components/btnPreviousNext", "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/read/formalContentPage/formalContentPage": { "navigationBarTitleText": "正文", "usingComponents": { "voicebtn": "/components/voicebtn", "btn-previous-next": "/components/btnPreviousNext" }, "usingAutoImportComponents": {} }, "pages/read/oldList/oldList": { "navigationBarTitleText": "往期列表", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/read/journalCategoryPage/journalCategoryPage": { "navigationBarTitleText": "精选期刊", "usingComponents": { "voicebtn": "/components/voicebtn" }, "usingAutoImportComponents": {} }, "pages/read/read": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/elejournal/elejournal": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/myself/myself": { "navigationBarTitleText": "健康报", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/read/voicePlay/voicePlay": { "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#FAFAFA", "backgroundColor": "#FFFFFF" } };exports.default = _default;
 
 /***/ }),
 /* 8 */
 /*!*************************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/pages.json?{"type":"stat"} ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/pages.json?{"type":"stat"} ***!
   \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -8666,7 +8666,7 @@ function normalizeComponent (
 /***/ }),
 /* 15 */
 /*!*************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/store/index.js ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/store/index.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9635,7 +9635,7 @@ var index_esm = {
 /***/ }),
 /* 17 */
 /*!*************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/api/request.js ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/api/request.js ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -9724,7 +9724,7 @@ var myRequest = function myRequest(options) {
 /***/ }),
 /* 18 */
 /*!*****************************************************************************!*\
-  !*** E:/suhuaiping/uniapp/healthy_newspaper/node_modules/js-md5/src/md5.js ***!
+  !*** D:/AAAmyCode/前端/uniapp/uni-app-project/node_modules/js-md5/src/md5.js ***!
   \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -10414,7 +10414,7 @@ var myRequest = function myRequest(options) {
     }
   }
 })();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/node-libs-browser/mock/process.js */ 19), __webpack_require__(/*! (webpack)/buildin/global.js */ 3)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../download/HBuilderX2.6.1/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 19), __webpack_require__(/*! ./../../../../../../../download/HBuilderX2.6.1/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ 3)))
 
 /***/ }),
 /* 19 */
